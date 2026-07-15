@@ -1,7 +1,12 @@
 html,
 body {
     font-family: "outfit", sans-serif;
-    @apply bg-primary text-neutral-content;
+    @apply text-neutral-content;
+    background-color: #1d1d1d;
+    background-image: url('/grunge.jpg');
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-attachment: fixed;
     overflow-x: hidden;
 }
 

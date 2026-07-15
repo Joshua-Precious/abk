@@ -2,53 +2,50 @@ import React from "react";
 
 export default function SocialMediaFooter() {
     return (
-        <footer className="relative bg-black/60 backdrop-blur-2xl border-t border-white/10 py-12 mt-10 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-accent/5 pointer-events-none"></div>
-            
-            <div className="relative z-10 container mx-auto px-4 text-center">
-                <h2 className="text-lg md:text-xl font-medium mb-8 text-white/80 uppercase tracking-widest">
-                    Share This Event
-                </h2>
-                
-                <div className="flex flex-wrap justify-center gap-6 md:gap-8 mb-10">
-                    <a 
-                        href="https://youtube.com/@accraboogieking" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="bg-white/5 border border-white/10 text-white/70 hover:bg-red-600 hover:text-white hover:border-red-500 p-4 rounded-2xl shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(220,38,38,0.3)]"
-                    >
-                        <svg className="w-7 h-7 md:w-8 md:h-8" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                        </svg>
-                    </a>
+        <footer className="relative mt-20">
+            <div className="container mx-auto px-4 mb-8">
+                <div className="liquid-glass chromatic-edge rounded-3xl p-8 md:p-12">
+                    <div className="flex flex-col md:flex-row items-center justify-between gap-10 border-b border-white/10 pb-10">
+                        {/* Logo Left */}
+                        <div className="w-full md:w-1/3 flex justify-center md:justify-start">
+                            <div className="w-32 h-32 md:w-40 md:h-40 border-2 border-white/20 p-2 rounded-xl flex items-center justify-center bg-black/40">
+                                <img src="/assets/lockUp.png" alt="Logo" className="max-w-full max-h-full object-contain filter drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]" />
+                            </div>
+                        </div>
+
+                        {/* Follow Us Center */}
+                        <div className="w-full md:w-1/3 flex flex-col items-center justify-center text-center">
+                            <h3 className="text-xl md:text-2xl font-bold tracking-widest text-white uppercase mb-6">
+                                FOLLOW US
+                            </h3>
+                            <div className="flex gap-4">
+                                <a href="https://www.instagram.com/accraboogieking" target="_blank" rel="noopener noreferrer" className="w-12 h-12 md:w-14 md:h-14 border border-white/20 rounded-lg flex items-center justify-center text-white/70 hover:text-white hover:bg-white/10 transition-colors">
+                                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                </a>
+                                <a href="https://youtube.com/@accraboogieking" target="_blank" rel="noopener noreferrer" className="w-12 h-12 md:w-14 md:h-14 border border-white/20 rounded-lg flex items-center justify-center text-white/70 hover:text-white hover:bg-white/10 transition-colors">
+                                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                                </a>
+                                <a href="#" className="w-12 h-12 md:w-14 md:h-14 border border-white/20 rounded-lg flex items-center justify-center text-white/70 hover:text-white hover:bg-white/10 transition-colors">
+                                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        {/* Contact Us Right */}
+                        <div className="w-full md:w-1/3 flex justify-center md:justify-end">
+                            <h3 className="text-xl md:text-2xl font-bold tracking-widest text-white uppercase hover:text-accent cursor-pointer transition-colors">
+                                CONTACT US
+                            </h3>
+                        </div>
+                    </div>
                     
-                    <a 
-                        href="https://www.instagram.com/accraboogieking" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="bg-white/5 border border-white/10 text-white/70 hover:bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-600 hover:text-white hover:border-transparent p-4 rounded-2xl shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(219,39,119,0.3)]"
-                    >
-                        <svg className="w-7 h-7 md:w-8 md:h-8" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                        </svg>
-                    </a>
-                    
-                    <a 
-                        href="https://www.tiktok.com/@accraboogieking" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="bg-white/5 border border-white/10 text-white/70 hover:bg-black hover:text-white hover:border-white/20 p-4 rounded-2xl shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(0,0,0,0.5)]"
-                    >
-                        <svg className="w-7 h-7 md:w-8 md:h-8" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
-                        </svg>
-                    </a>
+                    {/* Copyright Bottom */}
+                    <div className="text-center pt-8">
+                        <p className="text-sm md:text-base font-bold tracking-widest text-white/50 uppercase">
+                            &copy; 2026 ACCRA'S BOUNCE KING
+                        </p>
+                    </div>
                 </div>
-                
-                <p className="text-white/40 text-sm mt-4">
-                    Follow us on social media for updates and behind-the-scenes content.<br />
-                    <span className="mt-2 block">&copy; {new Date().getFullYear()} ABK. All rights reserved.</span>
-                </p>
             </div>
         </footer>
     );

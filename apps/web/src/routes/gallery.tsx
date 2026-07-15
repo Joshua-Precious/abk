@@ -14,7 +14,7 @@ export default function Gallery() {
     const tabs = ['Past Events', 'Videos', 'Highlights', 'Behind the Scenes'];
 
     return (
-        <div className="flex flex-col min-h-screen bg-primary text-neutral-content">
+        <div className="flex flex-col min-h-screen text-neutral-content">
             <Header />
 
             <main className="pt-20 md:pt-24 flex-grow relative">

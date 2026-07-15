@@ -1,20 +1,19 @@
 import React, { useState } from "react";
 import { Search, Menu, X } from "lucide-react";
 import { useNavigate, useLocation } from "react-router";
-import image5 from "../assets/image5.png";
 
 export default function Header() {
     const navigate = useNavigate();
     const location = useLocation();
-    
+
     const [showSearch, setShowSearch] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    
+
     const navigateToHome = () => { navigate('/'); setIsMobileMenuOpen(false); };
     const navigateToGallery = () => { navigate('/gallery'); setIsMobileMenuOpen(false); };
     const navigateToRegister = () => { navigate('/register'); setIsMobileMenuOpen(false); };
-    
+
     const handleSearchSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         // Implement global search logic or redirect to a search page
@@ -22,33 +21,33 @@ export default function Header() {
         setShowSearch(false);
         setSearchQuery('');
     };
-    
+
     const currentPage = location.pathname;
-    
+
     const navItems = [
         { label: 'Home', path: '/', action: navigateToHome },
-        { label: 'Gallery', path: '/gallery', action: navigateToGallery },
-        { label: 'ABK TV', path: '#', action: () => {} },
+        { label: 'About', path: '#', action: () => { } },
+        { label: 'Merch', path: '#', action: () => { } },
+        { label: 'FAQs', path: '#', action: () => { } },
     ];
-    
+
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-primary/70 border-b border-white/10 shadow-xl transition-all duration-300">
-            <div className="flex items-center justify-between container mx-auto py-3 px-4">
+        <header className="fixed top-0 left-0 right-0 z-50 liquid-glass border-b border-white/10 shadow-xl transition-all duration-300">
+            <div className="flex items-center justify-between container mx-auto py-4 px-4">
                 <div onClick={navigateToHome} className="cursor-pointer">
-                    <img src={image5} alt="ABK" className="h-10 md:h-14 hover:scale-105 transition-transform"/>
+                    <img src="/assets/monogram.webp" alt="ABK" className="h-16 md:h-20 hover:scale-105 transition-transform" />
                 </div>
 
                 {/* Desktop Nav */}
-                <div className="hidden md:flex items-center space-x-2 p-1.5 bg-black/20 border border-white/5 rounded-full backdrop-blur-sm text-sm">
+                <div className="hidden md:flex items-center gap-8 text-lg">
                     {navItems.map(item => (
-                        <button 
+                        <button
                             key={item.label}
                             onClick={item.action}
-                            className={`px-4 py-1.5 rounded-full font-medium transition-all duration-300 ${
-                                currentPage === item.path 
-                                    ? 'bg-white/15 text-white shadow-sm' 
-                                    : 'text-white/70 hover:bg-white/10 hover:text-white'
-                            }`}
+                            className={`px-4 py-1.5 font-medium ${currentPage === item.path
+                                ? 'text-white border-b-2 border-accent shadow-sm'
+                                : 'text-white/70 hover:border-b-2 hover:border-white/10 hover:cursor-pointer'
+                                }`}
                         >
                             {item.label}
                         </button>
@@ -56,18 +55,14 @@ export default function Header() {
                 </div>
 
                 <div className="flex items-center space-x-3">
-                    <button 
+                    <button
                         onClick={navigateToRegister}
-                        className={`hidden md:block cursor-pointer font-bold px-6 py-2.5 rounded-full ${
-                            currentPage === '/register' 
-                                ? 'btn-glass' 
-                                : 'bg-white/10 text-white hover:btn-glass border border-white/10'
-                        }`}
+                        className="cursor-pointer font-bold px-6 py-2.5 text-xl"
                     >
-                        Register
+                        REGISTER
                     </button>
-                    
-                    <button 
+
+                    <button
                         onClick={() => setShowSearch(!showSearch)}
                         className="p-2 rounded-full bg-white/5 hover:bg-white/15 text-white/80 hover:text-white transition-colors border border-white/5"
                     >
@@ -75,7 +70,7 @@ export default function Header() {
                     </button>
 
                     {/* Mobile Menu Toggle */}
-                    <button 
+                    <button
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                         className="md:hidden p-2 rounded-full bg-white/5 text-white/80 hover:text-white"
                     >
@@ -86,23 +81,26 @@ export default function Header() {
 
             {/* Mobile Menu Dropdown */}
             {isMobileMenuOpen && (
-                <div className="md:hidden absolute top-full left-0 right-0 bg-primary/95 backdrop-blur-xl border-b border-white/10 p-4 flex flex-col space-y-3 shadow-2xl">
-                    {navItems.map(item => (
-                        <button 
-                            key={item.label}
-                            onClick={item.action}
-                            className={`p-3 rounded-lg text-left font-medium ${
-                                currentPage === item.path ? 'bg-white/10 text-white' : 'text-white/70'
-                            }`}
-                        >
-                            {item.label}
-                        </button>
-                    ))}
-                    <button 
+                <div className="md:hidden absolute top-full left-0 right-0 liquid-glass border-b border-white/10 p-8 flex flex-col items-center space-y-6 shadow-2xl">
+                    <div className="flex flex-col items-center space-y-4 w-full">
+                        {navItems.map(item => (
+                            <button
+                                key={item.label}
+                                onClick={item.action}
+                                className={`px-4 py-2 font-medium text-xl transition-all duration-300 border-b-2 ${currentPage === item.path
+                                    ? 'text-white border-accent shadow-sm'
+                                    : 'text-white/70 border-transparent hover:border-white/10 hover:cursor-pointer'
+                                    }`}
+                            >
+                                {item.label}
+                            </button>
+                        ))}
+                    </div>
+                    <button
                         onClick={navigateToRegister}
-                        className="p-3 rounded-lg btn-glass font-bold mt-2"
+                        className="w-full max-w-xs py-3 rounded-full btn-glass font-bold text-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 mt-2"
                     >
-                        Register
+                        REGISTER
                     </button>
                 </div>
             )}
