@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Header from "../components/blocks/Header";
 import HeroSection from "../components/blocks/HeroSection";
-import LogoSection from "../components/blocks/LogoSection";
 import PartnersSection from "../components/blocks/PartnersSection";
 import SocialMediaFooter from "../components/blocks/SocialMediaFooter";
 import GlassyContainer from "../components/ui/GlassyContainer";
 import GlassyCard from "../components/ui/GlassyCard";
-import image2 from "../components/assets/image2.jpg";
-import flier from "../components/assets/flier.jpg";
+
+const image2 = "/assets/teaser.png";
+const flier = "/assets/monogram.webp";
 
 export default function Gallery() {
     const [activeTab, setActiveTab] = useState("Past Events");
@@ -22,9 +22,8 @@ export default function Gallery() {
                 <div className="absolute top-1/3 left-1/4 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
 
                 <HeroSection />
-                
+
                 <div className="relative z-10 space-y-12 pb-12">
-                    <LogoSection />
 
                     {/* Gallery Section */}
                     <div id="gallery-section" className="text-center pt-8">
@@ -39,11 +38,10 @@ export default function Gallery() {
                                     <button
                                         key={tab}
                                         onClick={() => setActiveTab(tab)}
-                                        className={`flex-1 py-3 px-4 rounded-lg transition-all duration-300 font-semibold text-sm md:text-base ${
-                                            activeTab === tab
+                                        className={`flex-1 py-3 px-4 rounded-lg transition-all duration-300 font-semibold text-sm md:text-base ${activeTab === tab
                                                 ? 'btn-glass'
                                                 : 'text-white/60 hover:text-white hover:bg-white/10'
-                                        }`}
+                                            }`}
                                     >
                                         {tab}
                                     </button>
@@ -61,7 +59,7 @@ export default function Gallery() {
                                             ].map((item, i) => (
                                                 <div key={i} className="group bg-black/40 border border-white/10 rounded-2xl overflow-hidden hover:border-white/30 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
                                                     <div className="h-56 overflow-hidden">
-                                                        <img src={item.src} alt={item.title} className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"/>
+                                                        <img src={item.src} alt={item.title} className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110" />
                                                     </div>
                                                     <div className="p-6">
                                                         <h3 className="font-semibold text-lg text-white mb-2">{item.title}</h3>
@@ -69,7 +67,7 @@ export default function Gallery() {
                                                     </div>
                                                 </div>
                                             ))}
-                                            
+
                                             <div className="group bg-black/40 border border-white/10 rounded-2xl overflow-hidden hover:border-white/30 transition-all duration-300">
                                                 <div className="w-full h-56 bg-white/5 flex items-center justify-center">
                                                     <span className="text-white/40 font-medium">More photos coming soon...</span>
@@ -163,7 +161,7 @@ export default function Gallery() {
                     <PartnersSection />
                 </div>
             </main>
-            
+
             <SocialMediaFooter />
         </div>
     );

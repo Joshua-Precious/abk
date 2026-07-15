@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../components/blocks/Header";
 import HeroSection from "../components/blocks/HeroSection";
-import LogoSection from "../components/blocks/LogoSection";
 import PartnersSection from "../components/blocks/PartnersSection";
 import SocialMediaFooter from "../components/blocks/SocialMediaFooter";
 import RegistrationForm from "../components/blocks/RegistrationForm";
@@ -18,7 +17,6 @@ export default function Register() {
                 <HeroSection />
                 
                 <div className="relative z-10 space-y-12 pb-12">
-                    <LogoSection />
                     
                     <div id="register-section">
                         <RegistrationForm />

@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 
 export default function CountdownSection() {
     // Target date: Dec 31, 2026
-    const targetDate = new Date("2026-12-31T23:59:59").getTime();
-    
+    const targetDate = new Date("2026-09-25T17:00:00").getTime();
+
     const [timeLeft, setTimeLeft] = useState({
         days: 0,
         hours: 0,
@@ -42,9 +42,9 @@ export default function CountdownSection() {
         <section className="container mx-auto px-4 py-8 md:py-16">
             <div className="max-w-6xl mx-auto text-center">
                 <h2 className="text-3xl md:text-5xl font-bold tracking-[0.2em] mb-12 text-white drop-shadow-lg uppercase">
-                    COUNT DOWN TO EVENT
+                    COUNT DOWN TO ABK 2026
                 </h2>
-                
+
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
                     {timeBlocks.map((block, index) => (
                         <div key={index} className="liquid-glass chromatic-edge p-1 rounded-2xl">

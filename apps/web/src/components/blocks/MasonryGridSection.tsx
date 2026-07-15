@@ -10,19 +10,14 @@ export default function MasonryGridSection() {
         { src: "/assets/mascot.png", span: "md:col-span-1 md:row-span-1" },
         { src: "/assets/bg.jpeg", span: "md:col-span-2 md:row-span-1" },
         { src: "/assets/monogram.webp", span: "md:col-span-1 md:row-span-1" },
-        { src: "/assets/mascot.png", span: "md:col-span-1 md:row-span-2" },
         { src: "/assets/bg.jpeg", span: "md:col-span-2 md:row-span-1" },
         { src: "/assets/mascot.png", span: "md:col-span-1 md:row-span-1" },
-        { src: "/assets/monogram.webp", span: "md:col-span-1 md:row-span-1" },
-        { src: "/assets/lockUp.png", span: "md:col-span-1 md:row-span-2" },
-        { src: "/assets/bg.jpeg", span: "md:col-span-2 md:row-span-1" },
-        { src: "/assets/mascot.png", span: "md:col-span-1 md:row-span-1" }
     ];
 
     return (
         <section className="py-8 md:py-16">
             <div className="w-full">
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 auto-rows-[200px]">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 auto-rows-[200px]">
                     {images.map((img, index) => (
                         <div
                             key={index}

@@ -1,28 +1,29 @@
 import React from "react";
-import spons1 from "../assets/spons1.png";
-import spons2 from "../assets/spons2.png";
-import spons3 from "../assets/spons3.jpg";
-import spons4 from "../assets/spons4.png";
 
 export default function PartnersSection() {
-    const sponsors = [spons1, spons2, spons3, spons4];
-    
+    const sponsors = [
+        "/assets/spons1.png",
+        "/assets/spons2.png",
+        "/assets/spons3.jpg",
+        "/assets/spons4.png"
+    ];
+
     return (
         <section className="container mx-auto px-4 py-8 md:py-16">
             <div className="max-w-5xl mx-auto liquid-glass chromatic-edge rounded-3xl p-6 md:p-12 text-center">
                 <h2 className="text-2xl md:text-3xl font-black tracking-[0.2em] text-white uppercase mb-10">
                     SPONSORS TAB
                 </h2>
-                
+
                 <div className="flex flex-wrap items-center justify-center gap-6 md:gap-12 bg-black/40 p-6 md:p-10 rounded-2xl border border-white/5">
                     {sponsors.map((spons, i) => (
-                        <div 
-                            key={i} 
+                        <div
+                            key={i}
                             className="h-20 w-32 md:h-28 md:w-40 flex items-center justify-center p-2"
                         >
-                            <img 
-                                src={spons} 
-                                alt={`Sponsor ${i + 1}`} 
+                            <img
+                                src={spons}
+                                alt={`Sponsor ${i + 1}`}
                                 className="max-h-full max-w-full object-contain filter grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500 hover:scale-110"
                             />
                         </div>

@@ -3,8 +3,8 @@ import { Play } from "lucide-react";
 
 export default function TrailerSection() {
     return (
-        <section className="py-8 md:py-16">
-            <div className="relative w-full rounded-3xl overflow-hidden liquid-glass border border-white/10 md:p-4 chromatic-edge">
+        <section className="h-full py-8 md:py-16">
+            <div className="relative container mx-auto w-full rounded-3xl overflow-hidden liquid-glass md:p-4 chromatic-edge">
                 <div className="aspect-video bg-black/60 rounded-2xl flex flex-col items-center justify-center relative group cursor-pointer overflow-hidden">
                     {/* Placeholder Background */}
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-black z-0"></div>
