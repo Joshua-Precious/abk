@@ -1,6 +1,13 @@
+@font-face {
+    font-family: 'Spongeboy Me Bob';
+    src: url('/spongeboy-me-bob.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html,
 body {
-    font-family: "outfit", sans-serif;
+    font-family: "Spongeboy Me Bob", sans-serif;
     @apply text-neutral-content;
     background-color: #1d1d1d;
     background-image: url('/grunge.jpg');

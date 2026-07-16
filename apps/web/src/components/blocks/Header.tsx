@@ -10,14 +10,16 @@ export default function Header() {
 
     const navigateToHome = () => { navigate('/'); setIsMobileMenuOpen(false); };
     const navigateToRegister = () => { navigate('/register'); setIsMobileMenuOpen(false); };
+    const navigateToFAQ = () => { navigate('/faq'); setIsMobileMenuOpen(false); };
+    const navigateToAbout = () => { navigate('/about'); setIsMobileMenuOpen(false); };
 
     const currentPage = location.pathname;
 
     const navItems = [
         { label: 'Home', path: '/', action: navigateToHome },
-        { label: 'About', path: '#', action: () => { } },
+        { label: 'About', path: '/about', action: navigateToAbout },
         { label: 'Merch', path: '#', action: () => { } },
-        { label: 'FAQs', path: '#', action: () => { } },
+        { label: 'FAQs', path: '/faq', action: navigateToFAQ },
     ];
 
     return (

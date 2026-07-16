@@ -10,11 +10,13 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
+    "@prisma/adapter-pg": "^7.8.0",
     "@prisma/client": "^7.8.0",
     "@repo/types": "*",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.1.0",
+    "pg": "^8.22.0",
     "prisma": "^7.8.0",
     "resend": "^6.17.2"
   },

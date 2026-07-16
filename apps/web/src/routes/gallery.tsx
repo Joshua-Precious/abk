@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Header from "../components/blocks/Header";
 import HeroSection from "../components/blocks/HeroSection";
 import PartnersSection from "../components/blocks/PartnersSection";
-import SocialMediaFooter from "../components/blocks/SocialMediaFooter";
+import SocialMediaFooter from "../components/blocks/Footer";
 import GlassyContainer from "../components/ui/GlassyContainer";
 import GlassyCard from "../components/ui/GlassyCard";
 
@@ -39,8 +39,8 @@ export default function Gallery() {
                                         key={tab}
                                         onClick={() => setActiveTab(tab)}
                                         className={`flex-1 py-3 px-4 rounded-lg transition-all duration-300 font-semibold text-sm md:text-base ${activeTab === tab
-                                                ? 'btn-glass'
-                                                : 'text-white/60 hover:text-white hover:bg-white/10'
+                                            ? 'btn-glass'
+                                            : 'text-white/60 hover:text-white hover:bg-white/10'
                                             }`}
                                     >
                                         {tab}
