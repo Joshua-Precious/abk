@@ -77,7 +77,7 @@ export default function TimelineSection() {
     return (
         <section className="container mx-auto px-4 py-12 md:py-24 relative z-10">
             <div className="max-w-5xl mx-auto text-center flex flex-col gap-2">
-                <h2 className="text-2xl md:text-4xl font-black tracking-[0.3em] text-white uppercase">
+                <h2 className="text-2xl md:text-4xl font-black text-white uppercase">
                     TIMELINE OF ABK 26
                 </h2>
 

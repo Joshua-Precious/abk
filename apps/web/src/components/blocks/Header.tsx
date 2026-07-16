@@ -67,7 +67,7 @@ export default function Header() {
             {/* Mobile Menu Dropdown */}
             {isMobileMenuOpen && (
                 <div className="md:hidden absolute top-full left-0 right-0 bg-[#0f0f13] border-b border-white/10 p-5 flex flex-col items-center space-y-4 shadow-2xl">
-                    <div className="flex flex-col items-center space-y-2 w-full">
+                    <div className="flex flex-col items-center uppercase space-y-2 w-full">
                         {navItems.map(item => (
                             <button
                                 key={item.label}

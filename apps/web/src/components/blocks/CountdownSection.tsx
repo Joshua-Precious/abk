@@ -41,9 +41,7 @@ export default function CountdownSection() {
     return (
         <section className="container mx-auto px-4 py-8 md:py-16">
             <div className="max-w-6xl mx-auto flex flex-col items-center gap-8 w-full text-center">
-                <h2 className="text-3xl md:text-5xl font-bold tracking-[0.2em] text-white drop-shadow-lg uppercase">
-                    COUNT DOWN TO ABK 2026
-                </h2>
+
 
                 <div className="grid grid-cols-4 gap-2 sm:gap-4 md:gap-8 w-full max-w-[100vw] overflow-hidden">
                     {timeBlocks.map((block, index) => (
