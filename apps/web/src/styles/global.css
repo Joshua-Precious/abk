@@ -9,12 +9,23 @@ html,
 body {
     font-family: "Spongeboy Me Bob", sans-serif;
     @apply text-neutral-content;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0;
+    z-index: -1;
     background-color: #1d1d1d;
     background-image: url('/grunge.jpg');
     background-blend-mode: overlay;
     background-size: cover;
-    background-attachment: fixed;
-    overflow-x: hidden;
+    background-position: center;
 }
 
 /* Mobile responsive utilities */

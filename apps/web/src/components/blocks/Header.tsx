@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Icon } from "@iconify/react";
 import { useNavigate, useLocation } from "react-router";
 
 export default function Header() {
@@ -24,7 +24,7 @@ export default function Header() {
 
     return (
         <header className="fixed top-0 left-0 right-0 z-50 liquid-glass border-b border-white/10 shadow-xl transition-all duration-300">
-            <div className="flex items-center justify-between container mx-auto py-4 px-4">
+            <div className="flex items-center justify-between container mx-auto py-2 px-4">
                 <div onClick={navigateToHome} className="cursor-pointer">
                     <img src="/assets/monogram.webp" alt="ABK" className="h-16 md:h-20 hover:scale-105 transition-transform" />
                 </div>
@@ -59,20 +59,20 @@ export default function Header() {
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                         className="md:hidden p-2 rounded-full bg-white/5 text-white/80 hover:text-white"
                     >
-                        {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                        {isMobileMenuOpen ? <Icon icon="lucide:x" className="w-6 h-6" /> : <Icon icon="lucide:menu" className="w-6 h-6" />}
                     </button>
                 </div>
             </div>
 
             {/* Mobile Menu Dropdown */}
             {isMobileMenuOpen && (
-                <div className="md:hidden absolute top-full left-0 right-0 liquid-glass border-b border-white/10 p-8 flex flex-col items-center space-y-6 shadow-2xl">
-                    <div className="flex flex-col items-center space-y-4 w-full">
+                <div className="md:hidden absolute top-full left-0 right-0 bg-[#0f0f13] border-b border-white/10 p-5 flex flex-col items-center space-y-4 shadow-2xl">
+                    <div className="flex flex-col items-center space-y-2 w-full">
                         {navItems.map(item => (
                             <button
                                 key={item.label}
                                 onClick={item.action}
-                                className={`px-4 py-2 font-medium text-xl transition-all duration-300 border-b-2 ${currentPage === item.path
+                                className={`px-4 py-2 font-medium text-lg transition-all duration-300 border-b-2 ${currentPage === item.path
                                     ? 'text-white border-accent shadow-sm'
                                     : 'text-white/70 border-transparent hover:border-white/10 hover:cursor-pointer'
                                     }`}
@@ -83,7 +83,7 @@ export default function Header() {
                     </div>
                     <button
                         onClick={navigateToRegister}
-                        className="w-full max-w-xs py-3 rounded-full btn-glass font-bold text-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 mt-2"
+                        className="w-full max-w-[200px] py-2.5 rounded-full btn-glass font-bold text-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 mt-2"
                     >
                         REGISTER
                     </button>

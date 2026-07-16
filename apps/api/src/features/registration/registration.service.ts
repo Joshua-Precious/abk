@@ -11,3 +11,7 @@ export const registerTeam = async (data: Prisma.RegistrationCreateInput) => {
   
   return registration;
 };
+
+export const getAllRegistrations = async () => {
+  return await repository.getRegistrations();
+};

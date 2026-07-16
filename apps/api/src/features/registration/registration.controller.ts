@@ -39,3 +39,13 @@ export const register = async (req: Request, res: Response) => {
     return res.status(500).json({ error: 'Internal server error' });
   }
 };
+
+export const getAllRegistrations = async (req: Request, res: Response) => {
+  try {
+    const registrations = await service.getAllRegistrations();
+    return res.status(200).json({ data: registrations });
+  } catch (error) {
+    console.error('Error fetching registrations:', error);
+    return res.status(500).json({ error: 'Internal server error' });
+  }
+};

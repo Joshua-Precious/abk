@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { Icon } from "@iconify/react";
 
 export default function RegistrationForm() {
     // Form state
@@ -235,7 +236,11 @@ export default function RegistrationForm() {
                                 className="px-12 py-4 chromatic-bg text-white font-bold text-2xl rounded-full transform hover:scale-105 transition-all shadow-[0_0_20px_rgba(255,0,128,0.4)] hover:shadow-[0_0_30px_rgba(255,0,128,0.6)] active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed group relative overflow-hidden border-none"
                             >
                                 <span className="relative z-10 drop-shadow-md">
-                                    {isSubmitting ? 'Sending...' : 'SUBMIT REGISTRATION!'}
+                                    {isSubmitting ? (
+                                        <Icon icon="lucide:loader-2" className="w-8 h-8 animate-spin mx-auto" />
+                                    ) : (
+                                        'SUBMIT'
+                                    )}
                                 </span>
                             </button>
                         </div>

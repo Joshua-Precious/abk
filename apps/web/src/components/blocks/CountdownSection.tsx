@@ -40,25 +40,26 @@ export default function CountdownSection() {
 
     return (
         <section className="container mx-auto px-4 py-8 md:py-16">
-            <div className="max-w-6xl mx-auto text-center">
-                <h2 className="text-3xl md:text-5xl font-bold tracking-[0.2em] mb-12 text-white drop-shadow-lg uppercase">
+            <div className="max-w-6xl mx-auto flex flex-col items-center gap-8 w-full text-center">
+                <h2 className="text-3xl md:text-5xl font-bold tracking-[0.2em] text-white drop-shadow-lg uppercase">
                     COUNT DOWN TO ABK 2026
                 </h2>
 
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+                <div className="grid grid-cols-4 gap-2 sm:gap-4 md:gap-8 w-full max-w-[100vw] overflow-hidden">
                     {timeBlocks.map((block, index) => (
-                        <div key={index} className="liquid-glass chromatic-edge p-1 rounded-2xl">
-                            <div className="bg-black/40 backdrop-blur-md rounded-xl p-6 md:p-10 flex flex-col items-center justify-center border border-white/5 h-full">
-                                <span className="text-5xl md:text-7xl font-black text-white tracking-tighter drop-shadow-md">
+                        <div key={index} className="liquid-glass chromatic-edge rounded-xl md:rounded-2xl">
+                            <div className="bg-black/40 backdrop-blur-md rounded-lg md:rounded-xl py-4 px-1 sm:py-6 sm:px-4 md:py-8 md:px-12 flex flex-col items-center justify-center border border-white/5 h-full">
+                                <span className="text-2xl sm:text-4xl md:text-7xl p-1 md:p-2 font-black text-white drop-shadow-md">
                                     {String(block.value).padStart(2, '0')}
                                 </span>
-                                <span className="text-xs md:text-sm font-bold tracking-widest text-white/60 mt-4 uppercase">
+                                <span className="text-[0.5rem] sm:text-[0.6rem] md:text-sm font-bold text-white/60 mt-2 md:mt-4 uppercase text-center w-full overflow-hidden text-ellipsis">
                                     {block.label}
                                 </span>
                             </div>
                         </div>
                     ))}
                 </div>
+                <span className="text-white text-2xl font-bold uppercase">25th September, 2026</span>
             </div>
         </section>
     );

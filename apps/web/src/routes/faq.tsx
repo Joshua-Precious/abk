@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Header from "../components/blocks/Header";
 import SocialMediaFooter from "../components/blocks/Footer";
 import GlassyContainer from "../components/ui/GlassyContainer";
-import { PlusCircle, MinusCircle } from "lucide-react";
+import { Icon } from "@iconify/react";
 
 interface FAQItemProps {
     question: string;
@@ -23,9 +23,9 @@ const FAQItem = ({ question, answer, isOpen, onClick }: FAQItemProps) => {
                 </span>
                 <span className="ml-4 flex-shrink-0">
                     {isOpen ? (
-                        <MinusCircle className="w-6 h-6 text-primary-content" />
+                        <Icon icon="lucide:minus-circle" className="w-6 h-6 text-primary-content" />
                     ) : (
-                        <PlusCircle className="w-6 h-6 text-primary-content opacity-70 group-hover:opacity-100 transition-opacity" />
+                        <Icon icon="lucide:plus-circle" className="w-6 h-6 text-primary-content opacity-70 group-hover:opacity-100 transition-opacity" />
                     )}
                 </span>
             </button>
