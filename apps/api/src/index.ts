@@ -8,9 +8,9 @@ const app = express();
 const PORT = 3000;
 
 app.use(cors({
-  origin: "http://localhost:5173", // Only allow the web app
+  origin: "http://localhost:5173",
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"] // Allow Authorization header
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
 app.use(express.json());
 
